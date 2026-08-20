@@ -1,0 +1,247 @@
+@import "tailwindcss";
+
+/* ================================
+   NEXORA CUSTOM ANIMATIONS
+================================ */
+
+@theme {
+    --animate-gradient: gradientMove 8s ease infinite;
+    --animate-grid: gridMove 5s linear infinite;
+    --animate-float: heroFloat 4s ease-in-out infinite;
+    --animate-glow: glowPulse 4s ease-in-out infinite;
+    --animate-orbit: orbit 10s linear infinite;
+    --animate-float-one: floatOne 6s ease-in-out infinite;
+    --animate-float-two: floatTwo 7s ease-in-out infinite;
+    --animate-particle-one: particleOne 4s ease-in-out infinite;
+    --animate-particle-two: particleTwo 5s ease-in-out infinite;
+    --animate-particle-three: particleThree 4s ease-in-out infinite;
+    --animate-particle-four: particleFour 6s ease-in-out infinite;
+    --animate-fade-up: fadeUp 1s ease-out both;
+}
+
+
+/* ================================
+   MOVING GRADIENT
+================================ */
+
+@keyframes gradientMove {
+
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+
+}
+
+
+/* ================================
+   MOVING GRID
+================================ */
+
+@keyframes gridMove {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(50px);
+    }
+
+}
+
+
+/* ================================
+   HERO FLOAT
+================================ */
+
+@keyframes heroFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+
+}
+
+
+/* ================================
+   GLOW
+================================ */
+
+@keyframes glowPulse {
+
+    0%,
+    100% {
+        opacity: 0.25;
+        transform: translate(-50%, -50%) scale(0.9);
+    }
+
+    50% {
+        opacity: 0.55;
+        transform: translate(-50%, -50%) scale(1.15);
+    }
+
+}
+
+
+/* ================================
+   ORBIT
+================================ */
+
+@keyframes orbit {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+/* ================================
+   FLOATING GLOW ONE
+================================ */
+
+@keyframes floatOne {
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(80px, 40px);
+    }
+
+}
+
+
+/* ================================
+   FLOATING GLOW TWO
+================================ */
+
+@keyframes floatTwo {
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(-70px, -50px);
+    }
+
+}
+
+
+/* ================================
+   PARTICLES
+================================ */
+
+@keyframes particleOne {
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(80px, -60px);
+    }
+
+}
+
+
+@keyframes particleTwo {
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(-60px, 80px);
+    }
+
+}
+
+
+@keyframes particleThree {
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(-90px, -50px);
+    }
+
+}
+
+
+@keyframes particleFour {
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(70px, 60px);
+    }
+
+}
+
+
+/* ================================
+   FADE UP
+================================ */
+
+@keyframes fadeUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* ================================
+   BASE
+================================ */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: #020617;
+}
+
+::selection {
+    background: #22d3ee;
+    color: #020617;
+}
